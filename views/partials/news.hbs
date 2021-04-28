@@ -1,0 +1,15 @@
+{{#each news}}
+    <div class="card">
+        <div class="title">
+            <h2>{{title}}</h2>
+        </div>
+        <div class="content">
+            <img src="{{urlToImage}}">
+            <p>{{description}}</p>
+        </div>
+        <div id="separator"></div>
+        <div class="link">
+            <a href="{{url}}" target="blank">Read full article</a>
+        </div> 
+    </div>
+{{/each}}

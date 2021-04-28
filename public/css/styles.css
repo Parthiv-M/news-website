@@ -1,0 +1,226 @@
+* {
+    scrollbar-width: thin;
+    margin: auto;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* scrollbar customisation */
+
+*::-webkit-scrollbar {
+    width: 1px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: red;
+    border-radius: 20px;
+}
+
+/* loader design */
+
+.loader-wrapper {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    flex-flow: column;
+    background-color: black;
+}
+
+.loader {
+    align-items: center;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    border-top: 2px solid red;
+    width: 100px;
+    height: 100px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+
+  .loader-wrapper > p {
+      animation: blink 1000ms infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+/* header design */
+
+.header {
+    height: 10vh;
+    display: flex;
+    flex-flow: 'row wrap';
+    justify-content: flex-end;
+    padding-right: 5vh;
+    color: red;
+}
+
+.blinker {    
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    background-color: red;
+    border-radius: 50%;
+    animation: blink 1000ms infinite;
+}
+
+@keyframes blink {
+    from {
+        opacity: 0%;
+    } to {
+        opacity: 100%;
+    }
+}
+
+@-webkit-keyframes blink {
+    from {
+        opacity: 0%;
+    } to {
+        opacity: 100%;
+    }
+}
+
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 3rem;
+}
+
+/* card holder design */
+
+.card-holder {
+    overflow-y: hidden;
+    margin-bottom: 1%;
+    display: flex;
+    flex-flow: row nowrap;
+    white-space: nowrap;
+}
+
+/* card design */
+
+.card {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 72vh;
+    width: 500px;
+    margin: 20px;
+    box-shadow: 0px 1px 15px #e7e7e7;
+    border-radius: 10px;
+}
+
+.card > .title {
+    height: 100px;
+}
+
+.card > .title > h2 {
+    padding: 8px;
+    white-space: normal;
+    text-align: center;
+}
+
+.card > .content {
+    height: 470px;
+}
+
+.card > .content > p {
+    margin-top: 20px;
+    padding: 15px;
+    white-space: normal;
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+.card > .content > img {
+    height: 300px;
+    width: 500px;
+}
+
+.card > .link > a {
+    text-decoration: none;
+    color: #3c3c3c;
+}
+
+.card > .link > a:hover {
+    color: red;
+    font-size: 1.3rem;
+}
+
+.card > #separator {
+    height: 1px;
+    width: 100%;
+    background-color: #3c3c3c;
+}
+
+/* footer design */
+
+footer {
+    height: 10vh;
+    background-color: transparent;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    color: #3c3c3c;
+}
+
+.social-links > a{
+    color: red;
+}
+
+.social-links > a:hover{
+    color: #3c3c3c;
+}
+
+@media only screen and (max-width: 800px){
+    .header {
+        padding-bottom: 5vh;
+    }
+    .card-holder{
+        flex-flow: column;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .card {
+        height: 90vh;
+        width: 100vw;
+        margin: 0;
+        border: none;
+        box-shadow: none;
+        border-radius: none;
+        margin-bottom: 40px;
+    }
+    .card > .title {
+        height: 25vh;
+        /* background-color: black; */
+    }
+    .card > .content {
+        height: 60vh;
+    }
+    .card > .content > p {
+        font-size: 1rem;
+    }
+    #separator {
+        display: none;
+    }
+    .card > .content > img {
+        width: 100vw;
+    }
+    footer {
+        margin-top: 50px;
+    }
+} 

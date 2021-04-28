@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>News | Headlines</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Parthiv Menon">
+        <meta name="description" content="A website to keep track of the latest news headlines" />
+        {{!-- importing fonts --}}
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        {{!-- importing feather icons --}}
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        {{!-- importing style sheets --}}
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        {{!-- loader --}}
+        <div id="load" class="loader-wrapper">
+            <div class="loader"></div>
+            <p style="color: red;">Loading</p>
+        </div>
+        <div id="web-body">
+            {{!-- header row --}}
+            <div class="header">
+                <div style="flex-grow: 1;"></div>
+                <span style="display: flex; align-items: center">
+                    <div class="blinker"></div>
+                    <h1>HEADLINES</h1>
+                </span>
+            </div>
+
+            {{!-- news cards --}}
+            <div class="card-holder">
+                {{>news}}  
+            </div>
+
+            {{!-- footer --}}
+            {{>footer}}
+        </div>
+
+        {{!-- script to load feather icons --}}
+        <script>
+          feather.replace()
+        </script>
+        {{!-- loads external scripts --}}
+        <script src="/js/index.js"></script>
+    </body>
+</html>
