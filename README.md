@@ -11,8 +11,8 @@ A news aggregator website where you can browse top headlines from around the wor
 
 ### v1 (2020)
 
-![](https://raw.githubusercontent.com/Parthiv-M/news-app/master/extras/screenshot_v1.png)
+![](./extras/screenshot_v1.png)
 
 ### v2 (2021)
 
-![](https://raw.githubusercontent.com/Parthiv-M/news-app/master/extras/screenshot_v2.png)
+![](./extras/screenshot_v2.png)
