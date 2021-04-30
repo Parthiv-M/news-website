@@ -1,5 +1,5 @@
 ## A News Website
-A news aggregator website where you can browse top headlines from around the world. [NewsAPI](https://newsapi.org/) was used as the API to fetch news from the internet. Find the website [here](http://theprotonnews.herokuapp.com)
+A news aggregator website where you can browse top headlines from around the world. [NewsAPI](https://newsapi.org/) was used as the API to fetch news from the internet. Find the v1 website [here](http://theprotonnews.herokuapp.com) and the updated v2 website [here](https://ourheadlines.herokuapp.com/)
 
 ## Tech Stack
 
